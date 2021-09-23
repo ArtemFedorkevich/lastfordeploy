@@ -22,7 +22,7 @@ class Game:
         self.white = pygame.Color(255, 255, 255)
 
         # добавим звук
-        pygame.mixer.init()
+        pygame.init()
         pygame.mixer.music.load('intro.mp3')
         pygame.mixer.music.play()
 
