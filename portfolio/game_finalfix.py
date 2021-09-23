@@ -21,11 +21,6 @@ class Game:
         self.black = pygame.Color(0, 0, 0)
         self.white = pygame.Color(255, 255, 255)
 
-        # добавим звук
-        pygame.mixer.init()
-        pygame.mixer.music.load('intro.mp3')
-        pygame.mixer.music.play()
-
         # Frame per second controller
         # будет задавать количество кадров в секунду
         self.fps_controller = pygame.time.Clock()
@@ -58,8 +53,7 @@ class Game:
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_SPACE:
                         done = True
-        pygame.mixer.music.load('musicforgame.ogg')
-        pygame.mixer.music.play()
+
 
     def init_and_check_for_errors(self):
         """Начальная функция для инициализации и
@@ -141,8 +135,7 @@ class Game:
         go_rect.midtop = (self.screen_width / 2, 15)
         self.play_surface.blit(go_surf, go_rect)
         pygame.display.flip()
-        pygame.mixer.music.load(music)
-        pygame.mixer.music.play()
+
         self.show_score(0)
         pygame.display.flip()
         time.sleep(3)
