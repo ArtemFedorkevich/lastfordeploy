@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-t#)7%(&v(^pe%h
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 
-ALLOWED_HOSTS = ['morning-waters-92484.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['portfolio-fedorkevich-a-n.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -127,8 +127,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     BASE_DIR / "resume/static/img/",
+    BASE_DIR / "project/static/img/",
     ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
