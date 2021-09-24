@@ -18,9 +18,6 @@ def project_detail(request, pk):
             'project': project
         }
 
-        if request.method == 'POST':
-            os.system('python game_finalfix.py')
-
         return render(request, 'project_detailbutton.html', context)
     elif pk==2:
         project = Project.objects.get(pk=pk)
